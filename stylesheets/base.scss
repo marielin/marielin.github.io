@@ -160,6 +160,7 @@ main {
 			height: 80pt;
 			width: 80pt;
 			margin-top: 10pt;
+			margin-bottom: 10pt;
 			margin-left: 20pt;
 		}
 
@@ -182,13 +183,15 @@ main {
 				font-size: $card-roles-font-size;
 			}
 		}
-
-		// background-color: $debug-color-4;
-		background-color: white;
 	}
 
 	#towerfall-card {
 		background-color: $towerfall-color;
+
+		.card-text {
+			margin-top: 14pt;
+			margin-bottom: 14pt;
+		}
 	}
 
 	#calendar-card {

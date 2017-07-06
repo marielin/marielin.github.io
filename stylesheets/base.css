@@ -72,13 +72,13 @@ main .card {
   height: 100pt;
   border-radius: 5pt;
   font-family: "Helvetica Neue", sans-serif;
-  color: white;
-  background-color: white; }
+  color: white; }
   main .card .card-icon {
     float: left;
     height: 80pt;
     width: 80pt;
     margin-top: 10pt;
+    margin-bottom: 10pt;
     margin-left: 20pt; }
   main .card .card-text {
     display: inline-block;
@@ -96,6 +96,9 @@ main .card {
 
 main #towerfall-card {
   background-color: black; }
+  main #towerfall-card .card-text {
+    margin-top: 14pt;
+    margin-bottom: 14pt; }
 
 main #calendar-card {
   background-color: #FC3D39; }
