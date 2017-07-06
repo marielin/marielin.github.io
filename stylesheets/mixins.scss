@@ -1,0 +1,10 @@
+@mixin fade {
+	-webkit-transition:color $link-fade-animation-length;
+	-moz-transition:color $link-fade-animation-length;
+	-o-transition:color $link-fade-animation-length;
+	transition:color $link-fade-animation-length;
+}
+
+@mixin shade {
+	filter: brightness(40%);
+}

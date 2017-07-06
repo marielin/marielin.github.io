@@ -1,0 +1,191 @@
+html {
+  max-width: 600pt;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF; }
+
+#background {
+  position: absolute;
+  top: 0;
+  width: 600pt;
+  height: auto;
+  z-index: 100;
+  background-color: white; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: color 0.1s;
+  -moz-transition: color 0.1s;
+  -o-transition: color 0.1s;
+  transition: color 0.1s; }
+
+a:hover {
+  color: #FF2323; }
+
+header {
+  display: inline-block;
+  width: 600pt;
+  padding-top: 30pt;
+  color: black;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 30pt;
+  background-color: #FFFFFF; }
+  header #header-title {
+    font-weight: 600;
+    padding-left: 100pt; }
+  header #header-subtitle {
+    font-weight: 300; }
+
+nav {
+  float: left;
+  width: 70pt;
+  height: auto;
+  padding-top: 20pt;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 10pt;
+  font-weight: 500;
+  text-align: right;
+  line-height: 1.6;
+  background-color: #FFFFFF; }
+  nav #active-link {
+    color: black; }
+  nav #inactive-link {
+    color: #B3B3B3; }
+
+main {
+  position: relative;
+  float: left;
+  width: 500pt;
+  padding-top: 20pt;
+  padding-left: 30pt;
+  background-color: #FFFFFF; }
+
+main .center-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100pt; }
+
+main .card {
+  margin-bottom: 10pt;
+  width: 500pt;
+  height: 100pt;
+  border-radius: 5pt;
+  font-family: "Helvetica Neue", sans-serif;
+  color: white;
+  background-color: white; }
+  main .card .card-icon {
+    float: left;
+    height: 80pt;
+    width: 80pt;
+    margin-top: 10pt;
+    margin-left: 20pt; }
+  main .card .card-text {
+    display: inline-block;
+    float: left;
+    margin-top: 10pt;
+    margin-bottom: 14pt;
+    margin-left: 20pt;
+    text-shadow: 0 1pt 10pt rgba(0, 0, 0, 0.4); }
+    main .card .card-text .card-title {
+      font-weight: 600;
+      font-size: 20pt; }
+    main .card .card-text .card-roles {
+      font-weight: 400;
+      font-size: 12pt; }
+
+main #towerfall-card {
+  background-color: black; }
+
+main #calendar-card {
+  background-color: #FC3D39; }
+
+main #gameplaykit-card {
+  background-color: #F5683A; }
+
+main #dndj-card {
+  background-color: black; }
+
+main #rp-card {
+  background-color: #1B96B4; }
+
+main #cocoanuts-card {
+  background-color: #6D953B; }
+
+main .hero-image {
+  width: 500pt;
+  border-radius: 5pt;
+  filter: brightness(40%); }
+
+main .project-text {
+  position: absolute;
+  top: 35pt;
+  left: 30pt;
+  margin-left: 20pt;
+  color: white;
+  font-family: "Helvetica Neue", sans-serif; }
+  main .project-text .project-title {
+    font-size: 36pt;
+    font-weight: 500; }
+  main .project-text .project-roles {
+    position: absolute;
+    top: 45pt;
+    font-size: 18pt;
+    font-weight: 400; }
+  main .project-text .project-languages-tools {
+    position: absolute;
+    top: 200pt;
+    font-size: 18pt;
+    font-weight: 400; }
+
+main .sub-image-1 {
+  margin-top: 5pt;
+  margin-right: 5pt;
+  width: 245pt;
+  border-radius: 5pt; }
+
+main .sub-image-2 {
+  width: 245pt;
+  border-radius: 5pt; }
+
+main .subtitle {
+  margin-top: 4pt;
+  margin-left: 5pt;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12pt;
+  font-weight: 500;
+  color: #808080; }
+
+main .subtitle a {
+  color: #4B81FF; }
+
+main article {
+  margin-top: 20pt;
+  font-family: "Marion", "Baskerville", serif;
+  font-size: 18pt;
+  line-height: 1.2; }
+
+main #resume {
+  width: 500pt;
+  border-radius: 5pt;
+  filter: brightness(98%); }
+
+main .download {
+  float: right;
+  margin-left: 20pt;
+  margin-top: 8pt;
+  margin-right: 6pt;
+  width: 60pt;
+  height: auto; }
+
+main #about {
+  color: black;
+  font-family: "Marion", "Baskerville", serif;
+  font-size: 18pt;
+  font-weight: 400;
+  line-height: 1.2; }
+
+footer {
+  float: left;
+  width: 600pt;
+  height: 30pt; }

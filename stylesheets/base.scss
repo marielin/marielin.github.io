@@ -1,0 +1,324 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+$ui-font: "Helvetica Neue", sans-serif;
+$body-font: "Marion", "Baskerville", serif;
+$desktop-width: 600pt;
+$content-width: 500pt;
+
+$header-font-size: 30pt;
+$nav-font-size: 10pt;
+$body-font-size: 18pt;
+$card-title-font-size: 20pt;
+$card-roles-font-size: 12pt;
+
+$text-color: black;
+$inactive-color: #B3B3B3;
+$towerfall-color: black;
+$calendar-color: #FC3D39;
+$gameplaykit-color: #F5683A;
+$dndj-color: black;
+$rp-color: #1B96B4;
+$cocoanuts-color: #6D953B;
+
+$img-border-radius: 5pt;
+
+$link-fade-animation-length: 0.1s;
+$resume-shade: 98%;
+
+$card-height: 100pt;
+
+$light: 300;
+$book: 400;
+$demibold: 500;
+$bold: 600;
+
+$debug-color-bg: #F8F8F8;
+$debug-color-1: #FFF8F8;
+$debug-color-2: #F8FFF8;
+$debug-color-3: #F8F8FF;
+$debug-color-4: #FFFFF8;
+$debug-color-5: #F8FFFF;
+$debug-color-6: #FFF8FF;
+
+// Disable Debug Colors
+$debug-color-bg: #FFFFFF;
+$debug-color-1: #FFFFFF;
+$debug-color-2: #FFFFFF;
+$debug-color-3: #FFFFFF;
+$debug-color-4: #FFFFFF;
+$debug-color-5: #FFFFFF;
+$debug-color-6: #FFFFFF;
+
+html {
+	max-width: $desktop-width;
+	margin-left: auto;
+	margin-right: auto;
+
+	// DEBUG
+	background-color: $debug-color-bg;
+}
+
+// DEBUG
+#background {
+	position: absolute;
+	top: 0;
+	width: $desktop-width;
+	height: auto;
+	z-index: 100;
+
+	background-color: white;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	@include fade;
+}
+
+a:hover {
+	color: #FF2323;
+}
+
+header {
+	display: inline-block;
+	width: $desktop-width;
+	padding-top: 30pt;
+
+	color: $text-color;
+	font-family: $ui-font;
+	font-size: $header-font-size;
+
+	#header-title {
+		font-weight: $bold;
+		padding-left: 100pt;
+	}
+
+	#header-subtitle {
+		font-weight: $light;
+	}
+
+	// DEBUG
+	background-color: $debug-color-1;
+}
+
+nav {
+	float: left;
+	width: 70pt;
+	height: auto;
+	padding-top: 20pt;
+
+	font-family: $ui-font;
+	font-size: $nav-font-size;
+	font-weight: $demibold;
+
+	text-align: right;
+	line-height: 1.6;
+
+	#active-link {
+		color: $text-color;
+	}
+
+	#inactive-link {
+		color: $inactive-color;
+	}
+
+	// DEBUG
+	background-color: $debug-color-2;
+}
+
+main {
+	position: relative;
+	float: left;
+	width: $content-width;
+	padding-top: 20pt;
+	padding-left: 30pt;
+
+	// DEBUG
+	background-color: $debug-color-3;
+}
+
+// Work
+main {
+	.center-wrapper {
+		display: table-cell;
+		vertical-align: middle;
+		height: $card-height;
+	}
+
+	.card {
+		margin-bottom: 10pt;
+		width: $content-width;
+		height: $card-height;
+		border-radius: 5pt;
+
+		font-family: $ui-font;
+		color: white;
+
+		.card-icon {
+			float: left;
+			height: 80pt;
+			width: 80pt;
+			margin-top: 10pt;
+			margin-left: 20pt;
+		}
+
+		.card-text {
+			display: inline-block;
+			float: left;
+			margin-top: 10pt;
+			margin-bottom: 14pt;
+			margin-left: 20pt;
+
+			text-shadow: 0 1pt 10pt rgba(0, 0, 0, .4);
+
+			.card-title {
+				font-weight: $bold;
+				font-size: $card-title-font-size;
+			}
+
+			.card-roles {
+				font-weight: $book;
+				font-size: $card-roles-font-size;
+			}
+		}
+
+		// background-color: $debug-color-4;
+		background-color: white;
+	}
+
+	#towerfall-card {
+		background-color: $towerfall-color;
+	}
+
+	#calendar-card {
+		background-color: $calendar-color;
+	}
+
+	#gameplaykit-card {
+		background-color: $gameplaykit-color;
+	}
+
+	#dndj-card {
+		background-color: $dndj-color;
+	}
+
+	#rp-card {
+		background-color: $rp-color;
+	}
+
+	#cocoanuts-card {
+		background-color: $cocoanuts-color;
+	}
+}
+
+// Project
+main {
+	.hero-image {
+		width: $content-width;
+		border-radius: $img-border-radius;
+		@include shade;
+	}
+
+	.project-text {
+		position: absolute;
+		top: 35pt;
+		left: 30pt;
+		// position: relative;
+		// top: -270pt;
+		margin-left: 20pt;
+
+		color: white;
+		font-family: $ui-font;
+
+		.project-title {
+			font-size: 36pt;
+			font-weight: $demibold;
+		}
+
+		.project-roles {
+			position: absolute;
+			top: 45pt;
+			font-size: 18pt;
+			font-weight: $book;
+		}
+
+		.project-languages-tools {
+			position: absolute;
+			top: 200pt;
+
+			font-size: 18pt;
+			font-weight: $book;
+		}
+	}
+
+	.sub-image-1 {
+		margin-top: 5pt;
+		margin-right: 5pt;
+		width: 245pt;
+		border-radius: $img-border-radius;
+	}
+
+	.sub-image-2 {
+		width: 245pt;
+		border-radius: $img-border-radius;
+	}
+
+	.subtitle {
+		margin-top: 4pt;
+		margin-left: 5pt;
+
+		font-family: $ui-font;
+		font-size: 12pt;
+		font-weight: $demibold;
+		color: #808080;
+	}
+
+	.subtitle a {
+		color: #4B81FF;
+	}
+
+	article {
+		margin-top: 20pt;
+		font-family: $body-font;
+		font-size: 18pt;
+		line-height: 1.2;
+	}
+}
+
+// Resume
+main {
+	#resume {
+		width: $content-width;
+		border-radius: $img-border-radius;
+		filter: brightness($resume-shade);
+	}
+
+	.download {
+		float: right;
+		margin-left: 20pt;
+		margin-top: 8pt;
+		margin-right: 6pt;
+		width: 60pt;
+		height: auto;
+	}
+}
+
+// About
+main {
+	#about {
+		color: $text-color;
+		font-family: $body-font;
+		font-size: $body-font-size;
+		font-weight: $book;
+
+		line-height: 1.2;
+	}
+}
+
+footer {
+	// TODO: finish footer
+	float: left;
+	width: $desktop-width;
+	height: 30pt;
+}
