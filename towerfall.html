@@ -11,45 +11,47 @@
 		<a href="work.html"><span id="header-title">marie.</span> <span id="header-subtitle">designer &amp; engineer.</span></a>
 	</header>
 
-	<nav>
-		<span id="active-link"><a href="work.html">— WORK</a></span><br>
-		<br>
-		<span id="active-link"><a href="towerfall.html">TOWERFALL</a></span><br>
-		<span id="inactive-link"><a href="calendar.html">CALENDAR</a></span><br>
-		<span id="inactive-link"><a href="gameplaykit.html">GAMEPLAYKIT</a></span><br>
-		<span id="inactive-link"><a href="dndj.html">DNDJ</a></span><br>
-		<span id="inactive-link"><a href="rp.html">RP 2014</a></span><br>
-		<span id="inactive-link"><a href="cocoanuts.html">COCOANUTS</a></span><br>
-		<br>
-		<span id="inactive-link"><a href="resume.html">RESUME</a></span><br>
-		<span id="inactive-link"><a href="about.html">ABOUT</a></span>
-	</nav>
+	<div id="flexbox">
+		<nav>
+			<span id="active-link"><a href="work.html">— WORK</a></span><br>
+			<br>
+			<span id="active-link"><a href="towerfall.html">TOWERFALL</a></span><br>
+			<span id="inactive-link"><a href="calendar.html">CALENDAR</a></span><br>
+			<span id="inactive-link"><a href="gameplaykit.html">GAMEPLAYKIT</a></span><br>
+			<span id="inactive-link"><a href="dndj.html">DNDJ</a></span><br>
+			<span id="inactive-link"><a href="rp.html">RP 2014</a></span><br>
+			<span id="inactive-link"><a href="cocoanuts.html">COCOANUTS</a></span><br>
+			<br>
+			<span id="inactive-link"><a href="resume.html">RESUME</a></span><br>
+			<span id="inactive-link"><a href="about.html">ABOUT</a></span>
+		</nav>
 
-	<main>
-		<div class="project-card">
-			<img class="hero-image" src="res/towerfall/follow.png" alt="">
-			<div class="project-text">
-				<div class="project-title">Towerfall on an FPGA</div>
-				<div class="project-roles">hardware designer<br>software engineer<br>technical artist</div>
-				<div class="project-languages-tools">C • SystemVerilog • Swift<br>Quartus • Pixelmator</div>
+		<main>
+			<div class="project-card">
+				<img class="hero-image" src="res/towerfall/follow.png" alt="">
+				<div class="project-text">
+					<div class="project-title">Towerfall on an FPGA</div>
+					<div class="project-roles">hardware designer<br>software engineer<br>technical artist</div>
+					<div class="project-languages-tools">C • SystemVerilog • Swift<br>Quartus • Pixelmator</div>
+				</div>
 			</div>
-		</div>
-		<img class="sub-image-1" src="res/towerfall/fpga.png" alt="">
-		<img class="sub-image-2" src="res/towerfall/multiplayer.png" alt="">
-		<div class="subtitle">Video available <a href="https://youtu.be/2JgICgRZdoE" target="_blank">here</a>.</div>
+			<img class="sub-image-1" src="res/towerfall/fpga.png" alt="">
+			<img class="sub-image-2" src="res/towerfall/multiplayer.png" alt="">
+			<div class="subtitle">Video available <a href="https://youtu.be/2JgICgRZdoE" target="_blank">here</a>.</div>
 
-		<article>
-			<p>I recreated a simplified version of the popular archery combat game Towerfall Ascension on a FPGA. I wrote hardware modules to manage the display and keyboard input, and programmed the game itself from scratch.</p>
+			<article>
+				<p>I recreated a simplified version of the popular archery combat game Towerfall Ascension on a FPGA. I wrote hardware modules to manage the display and keyboard input, and programmed the game itself from scratch.</p>
 
-			<h2>Software</h2>
+				<h2>Software</h2>
 
-			<p>On the software side, the game was programmed in C entirely from scratch. It interfaces with the display driver by communicating the id number, position, and dimension of each sprite over PIO blocks.</p>
+				<p>On the software side, the game was programmed in C entirely from scratch. It interfaces with the display driver by communicating the id number, position, and dimension of each sprite over PIO blocks.</p>
 
-			<h2>Hardware</h2>
+				<h2>Hardware</h2>
 
-			<p>The FPGA used was an Altera DE2-115.</p>
-		</article>
-	</main>
+				<p>The FPGA used was an Altera DE2-115.</p>
+			</article>
+		</main>
+	</div>
 
 	<footer>
 

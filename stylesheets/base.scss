@@ -3,13 +3,15 @@
 
 $ui-font: "Helvetica Neue", sans-serif;
 $body-font: "Marion", "Baskerville", serif;
-$desktop-width: 600pt;
-$content-width: 500pt;
+$desktop-max-width: 600pt;
+$content-max-width: 480pt;
+$nav-width: 70pt;
 
 $header-font-size: 30pt;
 $nav-font-size: 10pt;
 $body-font-size: 18pt;
 $card-title-font-size: 20pt;
+$card-title-line-height: 23pt;
 $card-roles-font-size: 12pt;
 
 $text-color: black;
@@ -26,7 +28,7 @@ $img-border-radius: 5pt;
 $link-fade-animation-length: 0.1s;
 $resume-shade: 98%;
 
-$card-height: 100pt;
+$card-height: 105pt;
 
 $light: 300;
 $book: 400;
@@ -51,7 +53,8 @@ $debug-color-5: #FFFFFF;
 $debug-color-6: #FFFFFF;
 
 html {
-	max-width: $desktop-width;
+	max-width: $desktop-max-width;
+	width: 100vw;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -63,11 +66,16 @@ html {
 #background {
 	position: absolute;
 	top: 0;
-	width: $desktop-width;
+	max-width: $desktop-max-width;
+	width: 100vw;
 	height: auto;
 	z-index: 100;
 
 	background-color: white;
+}
+
+#flexbox {
+	display: flex;
 }
 
 a {
@@ -81,8 +89,8 @@ a:hover {
 }
 
 header {
+	flex: 0 1 $desktop-max-width;
 	display: inline-block;
-	width: $desktop-width;
 	padding-top: 30pt;
 
 	color: $text-color;
@@ -91,7 +99,7 @@ header {
 
 	#header-title {
 		font-weight: $bold;
-		padding-left: 100pt;
+		margin-left: 100pt;
 	}
 
 	#header-subtitle {
@@ -103,11 +111,10 @@ header {
 }
 
 nav {
-	float: left;
-	width: 70pt;
+	flex: 0 0 $nav-width;
+
 	height: auto;
 	padding-top: 20pt;
-
 	font-family: $ui-font;
 	font-size: $nav-font-size;
 	font-weight: $demibold;
@@ -128,11 +135,14 @@ nav {
 }
 
 main {
+	flex: 0 1 $content-max-width;
+	display: flex;
+	flex-direction: column;
+
 	position: relative;
-	float: left;
-	width: $content-width;
 	padding-top: 20pt;
 	padding-left: 30pt;
+	padding-right: 20pt;
 
 	// DEBUG
 	background-color: $debug-color-3;
@@ -148,7 +158,6 @@ main {
 
 	.card {
 		margin-bottom: 10pt;
-		width: $content-width;
 		height: $card-height;
 		border-radius: 5pt;
 
@@ -167,18 +176,21 @@ main {
 		.card-text {
 			display: inline-block;
 			float: left;
-			margin-top: 10pt;
+			margin-top: 11pt;
 			margin-bottom: 14pt;
 			margin-left: 20pt;
+			margin-right: 20pt;
 
 			text-shadow: 0 1pt 10pt rgba(0, 0, 0, .4);
 
 			.card-title {
 				font-weight: $bold;
 				font-size: $card-title-font-size;
+				line-height: $card-title-line-height;
 			}
 
 			.card-roles {
+				margin-top: 3pt;
 				font-weight: $book;
 				font-size: $card-roles-font-size;
 			}
@@ -218,7 +230,7 @@ main {
 // Project
 main {
 	.hero-image {
-		width: $content-width;
+		max-width: $content-max-width;
 		border-radius: $img-border-radius;
 		@include shade;
 	}
@@ -292,7 +304,9 @@ main {
 // Resume
 main {
 	#resume {
-		width: $content-width;
+		flex: 0 1 $content-max-width;
+		max-width: 100%;
+		height: auto;
 		border-radius: $img-border-radius;
 		filter: brightness($resume-shade);
 	}
@@ -322,6 +336,7 @@ main {
 footer {
 	// TODO: finish footer
 	float: left;
-	width: $desktop-width;
+	max-width: $content-max-width;
+	width: 100vw;
 	height: 30pt;
 }

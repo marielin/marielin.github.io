@@ -14,5 +14,12 @@ rp
 - Pixelmator
 
 # article
-Reflections Projections is a tech conference hosted every autumn at the University of Illinois at Urbana-Champaign. In 2014 I joined the Reflections Projections team as a co-lead of the print media team, and I quickly took charge as the main designer. 
+Reflections Projections is a tech conference hosted every autumn at the University of Illinois at Urbana-Champaign. In 2014 I joined the Reflections Projections team as a co-lead of the print media team, and I quickly took charge as the main designer. My biggest contributions were the annual conference logo, the program, and the video dashboard. 
 
+## Logo
+
+
+## Program
+
+
+## Video Dashboard

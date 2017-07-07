@@ -1,5 +1,6 @@
 html {
   max-width: 600pt;
+  width: 100vw;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFFFFF; }
@@ -7,10 +8,14 @@ html {
 #background {
   position: absolute;
   top: 0;
-  width: 600pt;
+  max-width: 600pt;
+  width: 100vw;
   height: auto;
   z-index: 100;
   background-color: white; }
+
+#flexbox {
+  display: flex; }
 
 a {
   color: inherit;
@@ -24,8 +29,8 @@ a:hover {
   color: #FF2323; }
 
 header {
+  flex: 0 1 600pt;
   display: inline-block;
-  width: 600pt;
   padding-top: 30pt;
   color: black;
   font-family: "Helvetica Neue", sans-serif;
@@ -33,13 +38,12 @@ header {
   background-color: #FFFFFF; }
   header #header-title {
     font-weight: 600;
-    padding-left: 100pt; }
+    margin-left: 100pt; }
   header #header-subtitle {
     font-weight: 300; }
 
 nav {
-  float: left;
-  width: 70pt;
+  flex: 0 0 70pt;
   height: auto;
   padding-top: 20pt;
   font-family: "Helvetica Neue", sans-serif;
@@ -54,22 +58,23 @@ nav {
     color: #B3B3B3; }
 
 main {
+  flex: 0 1 480pt;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  float: left;
-  width: 500pt;
   padding-top: 20pt;
   padding-left: 30pt;
+  padding-right: 20pt;
   background-color: #FFFFFF; }
 
 main .center-wrapper {
   display: table-cell;
   vertical-align: middle;
-  height: 100pt; }
+  height: 105pt; }
 
 main .card {
   margin-bottom: 10pt;
-  width: 500pt;
-  height: 100pt;
+  height: 105pt;
   border-radius: 5pt;
   font-family: "Helvetica Neue", sans-serif;
   color: white; }
@@ -83,14 +88,17 @@ main .card {
   main .card .card-text {
     display: inline-block;
     float: left;
-    margin-top: 10pt;
+    margin-top: 11pt;
     margin-bottom: 14pt;
     margin-left: 20pt;
+    margin-right: 20pt;
     text-shadow: 0 1pt 10pt rgba(0, 0, 0, 0.4); }
     main .card .card-text .card-title {
       font-weight: 600;
-      font-size: 20pt; }
+      font-size: 20pt;
+      line-height: 23pt; }
     main .card .card-text .card-roles {
+      margin-top: 3pt;
       font-weight: 400;
       font-size: 12pt; }
 
@@ -116,7 +124,7 @@ main #cocoanuts-card {
   background-color: #6D953B; }
 
 main .hero-image {
-  width: 500pt;
+  max-width: 480pt;
   border-radius: 5pt;
   filter: brightness(40%); }
 
@@ -169,7 +177,9 @@ main article {
   line-height: 1.2; }
 
 main #resume {
-  width: 500pt;
+  flex: 0 1 480pt;
+  max-width: 100%;
+  height: auto;
   border-radius: 5pt;
   filter: brightness(98%); }
 
@@ -190,5 +200,6 @@ main #about {
 
 footer {
   float: left;
-  width: 600pt;
+  max-width: 480pt;
+  width: 100vw;
   height: 30pt; }
