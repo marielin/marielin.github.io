@@ -1,13 +1,14 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
-$ui-font: "Helvetica Neue", sans-serif;
-$body-font: "Marion", "Baskerville", serif;
+$ui-font: "Helvetica Neue", "Gill Sans", sans-serif;
+$body-font: "Marion", "Garamond", serif;
 $desktop-max-width: 600pt;
 $content-max-width: 480pt;
 $nav-width: 70pt;
 
 $header-font-size: 30pt;
+$header-line-height: 25pt;
 $nav-font-size: 10pt;
 $body-font-size: 18pt;
 $card-title-font-size: 20pt;
@@ -92,17 +93,19 @@ header {
 	flex: 0 1 $desktop-max-width;
 	display: inline-block;
 	padding-top: 30pt;
+	margin-left: 100pt;
 
 	color: $text-color;
 	font-family: $ui-font;
 	font-size: $header-font-size;
 
 	#header-title {
+		display: inline-block;
 		font-weight: $bold;
-		margin-left: 100pt;
 	}
 
 	#header-subtitle {
+		display: inline-block;
 		font-weight: $light;
 	}
 

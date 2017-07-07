@@ -32,21 +32,23 @@ header {
   flex: 0 1 600pt;
   display: inline-block;
   padding-top: 30pt;
+  margin-left: 100pt;
   color: black;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "Gill Sans", sans-serif;
   font-size: 30pt;
   background-color: #FFFFFF; }
   header #header-title {
-    font-weight: 600;
-    margin-left: 100pt; }
+    display: inline-block;
+    font-weight: 600; }
   header #header-subtitle {
+    display: inline-block;
     font-weight: 300; }
 
 nav {
   flex: 0 0 70pt;
   height: auto;
   padding-top: 20pt;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "Gill Sans", sans-serif;
   font-size: 10pt;
   font-weight: 500;
   text-align: right;
@@ -76,7 +78,7 @@ main .card {
   margin-bottom: 10pt;
   height: 105pt;
   border-radius: 5pt;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "Gill Sans", sans-serif;
   color: white; }
   main .card .card-icon {
     float: left;
@@ -134,7 +136,7 @@ main .project-text {
   left: 30pt;
   margin-left: 20pt;
   color: white;
-  font-family: "Helvetica Neue", sans-serif; }
+  font-family: "Helvetica Neue", "Gill Sans", sans-serif; }
   main .project-text .project-title {
     font-size: 36pt;
     font-weight: 500; }
@@ -162,7 +164,7 @@ main .sub-image-2 {
 main .subtitle {
   margin-top: 4pt;
   margin-left: 5pt;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", "Gill Sans", sans-serif;
   font-size: 12pt;
   font-weight: 500;
   color: #808080; }
@@ -172,7 +174,7 @@ main .subtitle a {
 
 main article {
   margin-top: 20pt;
-  font-family: "Marion", "Baskerville", serif;
+  font-family: "Marion", "Garamond", serif;
   font-size: 18pt;
   line-height: 1.2; }
 
@@ -193,7 +195,7 @@ main .download {
 
 main #about {
   color: black;
-  font-family: "Marion", "Baskerville", serif;
+  font-family: "Marion", "Garamond", serif;
   font-size: 18pt;
   font-weight: 400;
   line-height: 1.2; }
