@@ -105,6 +105,8 @@ main .card {
       font-weight: 600;
       font-size: 20pt;
       line-height: 23pt; }
+      main .card .card-text .card-title span {
+        display: inline-block; }
     main .card .card-text .card-roles {
       margin-top: 3pt;
       font-weight: 400;

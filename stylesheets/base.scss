@@ -206,6 +206,10 @@ main {
 				font-weight: $bold;
 				font-size: $desktop-card-title-font-size;
 				line-height: $desktop-card-title-line-height;
+
+				span {
+					display: inline-block;
+				}
 			}
 
 			.card-roles {
