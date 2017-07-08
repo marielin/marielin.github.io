@@ -4,9 +4,11 @@ html {
   margin-right: auto;
   background-color: #FFFFFF; }
 
+body {
+  margin: 0 0 0 0;
+  overflow-x: hidden; }
+
 #background {
-  position: absolute;
-  top: 0;
   max-width: 600pt;
   margin-left: 10pt;
   margin-right: 10pt;
@@ -208,20 +210,22 @@ footer {
   width: 100vw;
   height: 30pt; }
 
-@media only screen and (max-width: 500pt) {
+@media only screen and (max-width: 768px) {
   #flexbox {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
   main {
-    justify-content: center; }
+    justify-content: center;
+    margin-left: 10pt;
+    margin-right: 10pt; }
   header {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     color: black;
     font-family: "Helvetica Neue", "Gill Sans", sans-serif;
-    font-size: 24pt; }
+    font-size: 20pt; }
     header #header-title {
       flex: 1 1 100%;
       font-weight: 600; }
@@ -229,7 +233,7 @@ footer {
       flex: 1 1 auto;
       font-weight: 300; }
     header a {
-      width: 208pt;
+      width: 178pt;
       margin-left: auto;
       margin-right: auto;
       display: flex;
@@ -240,11 +244,11 @@ footer {
   nav {
     display: flex;
     justify-content: space-between;
-    flex: 0 0 208pt;
+    flex: 0 0 178pt;
     height: auto;
     padding-top: 10pt;
     font-family: "Helvetica Neue", "Gill Sans", sans-serif;
-    font-size: 13pt;
+    font-size: 11pt;
     font-weight: 500;
     padding-left: 30pt;
     padding-right: 30pt;
@@ -258,27 +262,28 @@ footer {
     padding-left: 10pt;
     padding-right: 10pt; }
   main .center-wrapper {
-    height: 140pt; }
+    height: 100pt; }
   main .card {
     margin-bottom: 10pt;
-    height: 140pt; }
+    height: 100pt; }
     main .card .card-icon {
-      height: 80pt;
-      width: 80pt;
-      margin-top: 40pt;
-      margin-bottom: 40pt;
-      margin-left: 20pt; }
+      height: 60pt;
+      width: 60pt;
+      margin-top: 20pt;
+      margin-bottom: 20pt;
+      margin-left: 16pt; }
     main .card .card-text {
       margin-top: 11pt;
       margin-bottom: 14pt;
-      margin-left: 20pt;
-      margin-right: 20pt;
+      margin-left: 16pt;
+      margin-right: 16pt;
       text-shadow: 0 1pt 10pt rgba(0, 0, 0, 0.4); }
       main .card .card-text .card-title {
         font-weight: 600;
-        font-size: 20pt;
-        line-height: 23pt; }
+        font-size: 16pt;
+        line-height: 18pt; }
       main .card .card-text .card-roles {
         margin-top: 3pt;
-        font-weight: 400;
-        font-size: 12pt; } }
+        font-weight: 500;
+        font-size: 11pt;
+        line-height: 12pt; } }
