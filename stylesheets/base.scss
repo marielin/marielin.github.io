@@ -141,6 +141,10 @@ nav {
 		color: $text-color;
 	}
 
+	#active-link:before {
+		content: "— ";
+	}
+
 	#inactive-link {
 		color: $inactive-color;
 	}
@@ -426,6 +430,14 @@ footer {
 		span {
 			flex: 0 0 auto;
 			text-align: center;
+		}
+
+		#active-link a {
+				border-bottom: 1.3pt solid black;
+		}
+
+		#active-link:before {
+			content: none;
 		}
 	}
 
