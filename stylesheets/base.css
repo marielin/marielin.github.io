@@ -195,7 +195,6 @@ main #resume {
 
 main .download {
   float: right;
-  margin-left: 20pt;
   margin-top: 8pt;
   margin-right: 6pt;
   width: 60pt;
@@ -222,10 +221,11 @@ footer {
     justify-content: center; }
   main {
     justify-content: center;
-    margin-left: 10pt;
-    margin-right: 10pt; }
+    padding-left: 10pt;
+    padding-right: 10pt; }
   header {
     width: 100%;
+    padding-top: 24pt;
     margin-left: 0;
     margin-right: 0;
     color: black;
@@ -243,15 +243,17 @@ footer {
       margin-right: auto;
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start; }
+      justify-content: flex-start;
+      margin-bottom: 10pt; }
       header a span {
-        flex: 1 0 auto; }
+        flex: 1 0 auto;
+        height: 24pt; }
   nav {
     display: flex;
     justify-content: space-between;
     flex: 0 0 178pt;
     height: auto;
-    padding-top: 10pt;
+    padding-top: 0;
     font-family: "Helvetica Neue", "Gill Sans", sans-serif;
     font-size: 11pt;
     font-weight: 500;
@@ -268,8 +270,11 @@ footer {
     nav #active-link:before {
       content: none; }
   main {
-    padding-left: 10pt;
-    padding-right: 10pt; }
+    margin-left: 20pt;
+    margin-right: 20pt;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16pt; }
   main .center-wrapper {
     height: 100pt; }
   main .card {
@@ -298,4 +303,9 @@ footer {
         margin-top: 3pt;
         font-weight: 500;
         font-size: 11pt;
-        line-height: 12pt; } }
+        line-height: 12pt; }
+  main .download {
+    margin-top: 4pt;
+    margin-right: 4pt;
+    width: 50pt;
+    height: auto; } }

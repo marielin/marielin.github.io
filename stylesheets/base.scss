@@ -336,7 +336,6 @@ main {
 
 	.download {
 		float: right;
-		margin-left: 20pt;
 		margin-top: 8pt;
 		margin-right: 6pt;
 		width: 60pt;
@@ -375,12 +374,13 @@ footer {
 
 	main {
 		justify-content: center;
-		margin-left: 10pt;
-		margin-right: 10pt;
+		padding-left: 10pt;
+		padding-right: 10pt;
 	}
 
 	header {
 		width: 100%;
+		padding-top: 24pt;
 		margin-left: 0;
 		margin-right: 0;
 
@@ -405,9 +405,11 @@ footer {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: flex-start;
+			margin-bottom: 10pt;
 
 			span {
 				flex: 1 0 auto;
+				height: 24pt;
 			}
 		}
 	}
@@ -419,7 +421,7 @@ footer {
 		flex: 0 0 $mobile-header-size;
 
 		height: auto;
-		padding-top: 10pt;
+		padding-top: 0;
 		font-family: $ui-font;
 		font-size: $mobile-nav-font-size;
 		font-weight: $demibold;
@@ -437,7 +439,7 @@ footer {
 		}
 
 		#active-link a {
-				border-bottom: 1.3pt solid black;
+			border-bottom: 1.3pt solid black;
 		}
 
 		#active-link:before {
@@ -446,8 +448,11 @@ footer {
 	}
 
 	main {
-		padding-left: 10pt;
-		padding-right: 10pt;
+		margin-left: 20pt;
+		margin-right: 20pt;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 16pt;
 	}
 
 	// Work
@@ -492,6 +497,16 @@ footer {
 					line-height: $mobile-card-roles-line-height;
 				}
 			}
+		}
+	}
+
+	// Resume
+	main {
+		.download {
+			margin-top: 4pt;
+			margin-right: 4pt;
+			width: 50pt;
+			height: auto;
 		}
 	}
 }
