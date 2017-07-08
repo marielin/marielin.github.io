@@ -457,8 +457,11 @@ footer {
 		}
 
 		.card {
+			max-width: 330pt;
 			margin-bottom: 10pt;
 			height: $mobile-card-height;
+			margin-left: auto;
+			margin-right: auto;
 
 			.card-icon {
 				height: 60pt;
