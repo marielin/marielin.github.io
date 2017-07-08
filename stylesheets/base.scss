@@ -7,13 +7,18 @@ $desktop-max-width: 600pt;
 $content-max-width: 480pt;
 $nav-width: 70pt;
 
-$header-font-size: 30pt;
-$header-line-height: 25pt;
-$nav-font-size: 10pt;
+$desktop-header-font-size: 30pt;
+$mobile-header-font-size: 24pt;
+$desktop-nav-font-size: 10pt;
+$mobile-nav-font-size: 13pt;
+$mobile-header-size: 208pt;
 $body-font-size: 18pt;
-$card-title-font-size: 20pt;
-$card-title-line-height: 23pt;
-$card-roles-font-size: 12pt;
+$desktop-card-title-font-size: 20pt;
+$desktop-card-title-line-height: 23pt;
+$desktop-card-roles-font-size: 12pt;
+$mobile-card-title-font-size: 20pt;
+$mobile-card-title-line-height: 23pt;
+$mobile-card-roles-font-size: 12pt;
 
 $text-color: black;
 $inactive-color: #B3B3B3;
@@ -29,7 +34,8 @@ $img-border-radius: 5pt;
 $link-fade-animation-length: 0.1s;
 $resume-shade: 98%;
 
-$card-height: 105pt;
+$desktop-card-height: 100pt;
+$mobile-card-height: 140pt;
 
 $light: 300;
 $book: 400;
@@ -55,7 +61,6 @@ $debug-color-6: #FFFFFF;
 
 html {
 	max-width: $desktop-max-width;
-	width: 100vw;
 	margin-left: auto;
 	margin-right: auto;
 
@@ -68,7 +73,9 @@ html {
 	position: absolute;
 	top: 0;
 	max-width: $desktop-max-width;
-	width: 100vw;
+	margin-left: 10pt;
+	margin-right: 10pt;
+	width: auto;
 	height: auto;
 	z-index: 100;
 
@@ -97,7 +104,7 @@ header {
 
 	color: $text-color;
 	font-family: $ui-font;
-	font-size: $header-font-size;
+	font-size: $desktop-header-font-size;
 
 	#header-title {
 		display: inline-block;
@@ -119,7 +126,7 @@ nav {
 	height: auto;
 	padding-top: 20pt;
 	font-family: $ui-font;
-	font-size: $nav-font-size;
+	font-size: $desktop-nav-font-size;
 	font-weight: $demibold;
 
 	text-align: right;
@@ -156,12 +163,12 @@ main {
 	.center-wrapper {
 		display: table-cell;
 		vertical-align: middle;
-		height: $card-height;
+		height: $desktop-card-height;
 	}
 
 	.card {
 		margin-bottom: 10pt;
-		height: $card-height;
+		height: $desktop-card-height;
 		border-radius: 5pt;
 
 		font-family: $ui-font;
@@ -188,14 +195,14 @@ main {
 
 			.card-title {
 				font-weight: $bold;
-				font-size: $card-title-font-size;
-				line-height: $card-title-line-height;
+				font-size: $desktop-card-title-font-size;
+				line-height: $desktop-card-title-line-height;
 			}
 
 			.card-roles {
 				margin-top: 3pt;
 				font-weight: $book;
-				font-size: $card-roles-font-size;
+				font-size: $desktop-card-roles-font-size;
 			}
 		}
 	}
@@ -331,6 +338,7 @@ main {
 		font-family: $body-font;
 		font-size: $body-font-size;
 		font-weight: $book;
+		margin-top: 1pt;
 
 		line-height: 1.2;
 	}
@@ -342,4 +350,120 @@ footer {
 	max-width: $content-max-width;
 	width: 100vw;
 	height: 30pt;
+}
+
+@media only screen and (max-width: 500pt) {
+	#flexbox {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	main {
+		justify-content: center;
+	}
+
+	header {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+
+		color: $text-color;
+		font-family: $ui-font;
+		font-size: $mobile-header-font-size;
+
+		#header-title {
+			flex: 1 1 100%;
+			font-weight: $bold;
+		}
+
+		#header-subtitle {
+			flex: 1 1 auto;
+			font-weight: $light;
+		}
+
+		a {
+			width: $mobile-header-size;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+
+			span {
+				flex: 1 0 auto;
+			}
+		}
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+
+		flex: 0 0 $mobile-header-size;
+
+		height: auto;
+		padding-top: 10pt;
+		font-family: $ui-font;
+		font-size: $mobile-nav-font-size;
+		font-weight: $demibold;
+		padding-left: 30pt;
+		padding-right: 30pt;
+
+		text-align: right;
+		line-height: 1.6;
+
+		width: 100%;
+
+		span {
+			flex: 0 0 auto;
+			text-align: center;
+		}
+	}
+
+	main {
+		padding-left: 10pt;
+		padding-right: 10pt;
+	}
+
+	// Work
+	main {
+		.center-wrapper {
+			height: $mobile-card-height;
+		}
+
+		.card {
+			margin-bottom: 10pt;
+			height: $mobile-card-height;
+
+			.card-icon {
+				height: 80pt;
+				width: 80pt;
+				margin-top: 40pt;
+				margin-bottom: 40pt;
+				margin-left: 20pt;
+			}
+
+			.card-text {
+				margin-top: 11pt;
+				margin-bottom: 14pt;
+				margin-left: 20pt;
+				margin-right: 20pt;
+
+				text-shadow: 0 1pt 10pt rgba(0, 0, 0, .4);
+
+				.card-title {
+					font-weight: $bold;
+					font-size: $mobile-card-title-font-size;
+					line-height: $mobile-card-title-line-height;
+				}
+
+				.card-roles {
+					margin-top: 3pt;
+					font-weight: $book;
+					font-size: $mobile-card-roles-font-size;
+				}
+			}
+		}
+	}
 }

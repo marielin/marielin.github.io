@@ -1,6 +1,5 @@
 html {
   max-width: 600pt;
-  width: 100vw;
   margin-left: auto;
   margin-right: auto;
   background-color: #FFFFFF; }
@@ -9,7 +8,9 @@ html {
   position: absolute;
   top: 0;
   max-width: 600pt;
-  width: 100vw;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  width: auto;
   height: auto;
   z-index: 100;
   background-color: white; }
@@ -72,11 +73,11 @@ main {
 main .center-wrapper {
   display: table-cell;
   vertical-align: middle;
-  height: 105pt; }
+  height: 100pt; }
 
 main .card {
   margin-bottom: 10pt;
-  height: 105pt;
+  height: 100pt;
   border-radius: 5pt;
   font-family: "Helvetica Neue", "Gill Sans", sans-serif;
   color: white; }
@@ -198,6 +199,7 @@ main #about {
   font-family: "Marion", "Garamond", serif;
   font-size: 18pt;
   font-weight: 400;
+  margin-top: 1pt;
   line-height: 1.2; }
 
 footer {
@@ -205,3 +207,78 @@ footer {
   max-width: 480pt;
   width: 100vw;
   height: 30pt; }
+
+@media only screen and (max-width: 500pt) {
+  #flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  main {
+    justify-content: center; }
+  header {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    color: black;
+    font-family: "Helvetica Neue", "Gill Sans", sans-serif;
+    font-size: 24pt; }
+    header #header-title {
+      flex: 1 1 100%;
+      font-weight: 600; }
+    header #header-subtitle {
+      flex: 1 1 auto;
+      font-weight: 300; }
+    header a {
+      width: 208pt;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start; }
+      header a span {
+        flex: 1 0 auto; }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 208pt;
+    height: auto;
+    padding-top: 10pt;
+    font-family: "Helvetica Neue", "Gill Sans", sans-serif;
+    font-size: 13pt;
+    font-weight: 500;
+    padding-left: 30pt;
+    padding-right: 30pt;
+    text-align: right;
+    line-height: 1.6;
+    width: 100%; }
+    nav span {
+      flex: 0 0 auto;
+      text-align: center; }
+  main {
+    padding-left: 10pt;
+    padding-right: 10pt; }
+  main .center-wrapper {
+    height: 140pt; }
+  main .card {
+    margin-bottom: 10pt;
+    height: 140pt; }
+    main .card .card-icon {
+      height: 80pt;
+      width: 80pt;
+      margin-top: 40pt;
+      margin-bottom: 40pt;
+      margin-left: 20pt; }
+    main .card .card-text {
+      margin-top: 11pt;
+      margin-bottom: 14pt;
+      margin-left: 20pt;
+      margin-right: 20pt;
+      text-shadow: 0 1pt 10pt rgba(0, 0, 0, 0.4); }
+      main .card .card-text .card-title {
+        font-weight: 600;
+        font-size: 20pt;
+        line-height: 23pt; }
+      main .card .card-text .card-roles {
+        margin-top: 3pt;
+        font-weight: 400;
+        font-size: 12pt; } }
