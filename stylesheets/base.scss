@@ -17,6 +17,7 @@ $body-font-size: 18pt;
 $desktop-card-title-font-size: 20pt;
 $desktop-card-title-line-height: 23pt;
 $desktop-card-roles-font-size: 12pt;
+$desktop-card-roles-line-height: 13pt;
 $mobile-card-title-font-size: 16pt;
 $mobile-card-title-line-height: 18pt;
 $mobile-card-roles-font-size: 11pt;
@@ -214,8 +215,9 @@ main {
 
 			.card-roles {
 				margin-top: 3pt;
-				font-weight: $book;
+				font-weight: $demibold;
 				font-size: $desktop-card-roles-font-size;
+				line-height: $desktop-card-roles-line-height;
 			}
 		}
 	}

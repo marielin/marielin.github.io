@@ -109,8 +109,9 @@ main .card {
         display: inline-block; }
     main .card .card-text .card-roles {
       margin-top: 3pt;
-      font-weight: 400;
-      font-size: 12pt; }
+      font-weight: 500;
+      font-size: 12pt;
+      line-height: 13pt; }
 
 main #towerfall-card {
   background-color: black; }
